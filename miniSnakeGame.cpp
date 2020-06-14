@@ -1,8 +1,8 @@
-/*@author : Þükrü Erdem Gök
+/*@author : ÅžÃ¼krÃ¼ Erdem GÃ¶k
 *@date: 13/6/2020 - 14/6/2020
 *https://github.com/SukruGokk
 *TDM-GCC 4.9.2 32-bit release Windows
-* ~ MÝNÝ SNAKE GAME ~
+* ~ MÄ°NÄ° SNAKE GAME ~
 */
 
 
@@ -118,12 +118,18 @@ int main(){
 				dir = 4;
 			}
 		}
+		
+		//pause
+		else if(GetAsyncKeyState(VK_SPACE)){
+			dir = 5;
+		}
 
 		//move according to direction
 		if (dir == 1){ix = -10; iy = 0;}
 		else if (dir == 2){ix = 0; iy = -10;}
 		else if (dir == 3){ix = 10; iy = 0;}
-		else if (dir  == 4){ix = 0; iy = 10;}
+		else if (dir == 4){ix = 0; iy = 10;}
+		else if (dir == 5){ix = 0; iy= 0;}
 
 		//move the head of snake
 		snakePiecesX[0] += ix;
